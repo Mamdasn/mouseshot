@@ -15,7 +15,7 @@ into a terminal, the program can easily be started with
 Change database destination to a static directory in your system and also mess with the height and width of the rectangle to your satisfaction.  
 
 # Output 👊
-This program screenshots an arbitrary sized rectangular on the screen with the mouse on its center, whenever any mouse button is pressed.  
+This program screenshots an arbitrary sized rectangular on the screen with the mouse on its center whenever any mouse button is pressed.  
 ![Example image 1](/example-output/2021-03-26/2021-03-26_10-02-45.jpg)
 ![Example image 2](/example-output/2021-03-26/2021-03-26_09-57-06.jpg)
 
