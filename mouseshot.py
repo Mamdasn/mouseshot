@@ -4,11 +4,14 @@ from  subprocess import PIPE,Popen
 import os, threading, time, datetime, sys
 
 # Database [folder address]
-Database = "."
 if sys.platform == 'wind32':
     slash = "\\"
 else:
     slash = "/"
+
+Database = f".{slash}example-output"
+rect_Height = 300 # height of rectangle (should be even)   
+rect_Width = 300 # width of rectangle (should be even)
 
 class Mouse:
     def __init__ (self):
@@ -49,12 +52,13 @@ def get_screen_resolution():
     return (screen_x_width, screen_y_height)
 
 [screen_x_width, screen_y_height] = get_screen_resolution()
+
+# for a full screenshot
+# rect_Height, rect_Width = screen_x_width, screen_y_height  
+
 if not screen_x_width:
     print('Add the python code folder to your antivirus Exclusions')
     sys.exit(1)
-
-rect_Height = 300 # height of rectangle (should be even), screen_y_height
-rect_Width = 300 # width of rectangle (should be even), screen_x_width
 
 def fix_rect_and_screen_near_edges(x_mouse, y_mouse, rect_Width, rect_Height):
     if (x_mouse - rect_Width//2 < 0) : 
