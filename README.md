@@ -16,8 +16,8 @@ Change database destination to a static directory in your system and also mess w
 
 # Output
 This program screenshots an arbitrary sized rectangular on the screen with the mouse on its center, whenever any mouse button is pressed.  
-![Example image](/example-output/2021-03-26/2021-03-26_10-02-45.jpg)
-Format: ![Alt Text](url)
+![Example image 1](/example-output/2021-03-26/2021-03-26_10-02-45.jpg)
+![Example image 2](/example-output/2021-03-26/2021-03-26_09-57-06.jpg)
 
 # Caution!
 Remember to add the python code folder to exclusion in your system antivirus, as it may prevent the program to run properly.
