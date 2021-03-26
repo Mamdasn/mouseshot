@@ -83,7 +83,7 @@ def main():
                 print("mouse is clicked!")
                 # to capture a rectangle within the screen 
                 [ x_mouse, y_mouse ] = fix_rect_and_screen_near_edges(x_mouse, y_mouse, rect_Width, rect_Height)
-                output_address = f"{Database}{slash}screenshots{slash}{datetime.datetime.now().date()}"
+                output_address = f"{Database}{slash}{datetime.datetime.now().date()}"
                 if not os.path.isdir(output_address) :  
                     os.makedirs(output_address)
                 image = screen.grab(bbox=(x_mouse-rect_Width//2, y_mouse-rect_Height//2, x_mouse+rect_Width//2, y_mouse+rect_Height//2))
