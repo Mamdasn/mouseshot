@@ -1,6 +1,6 @@
 # Mouseshot ✊
 Purpose of this program is to monitor and to keep close track of what is happening on your computer. Nowadays, one can easily waste their precious time when using a computer thanks to the thousand of thousands of memes out there in the internet. 
-Hopefully, there are programs such as this one in the internet that give human a chance to fight back.  
+Hopefully, there are programs such as this one in the internet that give humans a chance to fight back.  
 
 > I don't believe that, with the click of a mouse, you should be able to buy unlimited amounts of ammunition. Bob Menendez  
 
