@@ -10,8 +10,8 @@ else:
     slash = "/"
 
 Database = f".{slash}example-output"
-rect_Height = 300 # height of rectangle (should be even)   
-rect_Width = 300 # width of rectangle (should be even)
+rect_Height = 300 # height of rectangle (should be even), set to zero for screen hight
+rect_Width = 300 # width of rectangle (should be even), set to zero for screen width
 
 class Mouse:
     def __init__ (self):
@@ -53,9 +53,6 @@ def get_screen_resolution():
 
 [screen_x_width, screen_y_height] = get_screen_resolution()
 
-# for a full screenshot
-# rect_Height, rect_Width = screen_x_width, screen_y_height  
-
 if not screen_x_width:
     print('Add the python code folder to your antivirus Exclusions')
     sys.exit(1)
@@ -86,15 +83,22 @@ def main():
                 output_address = f"{Database}{slash}{datetime.datetime.now().date()}"
                 if not os.path.isdir(output_address) :  
                     os.makedirs(output_address)
-                image = screen.grab(bbox=(x_mouse-rect_Width//2, y_mouse-rect_Height//2, x_mouse+rect_Width//2, y_mouse+rect_Height//2))
+                image = screen.grab(bbox=(
+                    x_mouse-rect_Width //2  if rect_Width  != 0 else 0, 
+                    y_mouse-rect_Height//2  if rect_Height != 0 else 0, 
+                    x_mouse+rect_Width //2  if rect_Width  != 0 else screen_x_width, 
+                    y_mouse+rect_Height//2  if rect_Height != 0 else screen_y_height))
                 image.save(f"{output_address}{slash}{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.jpg")
     
                 time.sleep(1)
             # to not use up all the cpu
-            time.sleep(0.0001)
+            time.sleep(0.02)
     except Exception as e:
                 # for debugging
-                print(e)
+                # print(e)
+                exc_type, exc_obj, exc_tb = sys.exc_info()
+                fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+                print(exc_type, fname, exc_tb.tb_lineno)
                 
 cThread = threading.Thread(target = main )
 cThread.daemon = True
