@@ -1,5 +1,4 @@
 from pynput import mouse
-import numpy as np
 import pyscreenshot as screen
 from  subprocess import PIPE,Popen
 import os, threading, time, datetime, sys
