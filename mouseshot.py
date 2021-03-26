@@ -52,9 +52,9 @@ def get_screen_resolution():
 if not screen_x_width:
     print('Add the python code folder to your antivirus Exclusions')
     sys.exit(1)
-    
-rect_Height = 300 # height of rectangle (should be even)
-rect_Width = 300 # width of rectangle (should be even)
+
+rect_Height = 300 # height of rectangle (should be even), screen_y_height
+rect_Width = 300 # width of rectangle (should be even), screen_x_width
 
 def fix_rect_and_screen_near_edges(x_mouse, y_mouse, rect_Width, rect_Height):
     if (x_mouse - rect_Width//2 < 0) : 
