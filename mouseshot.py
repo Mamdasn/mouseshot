@@ -3,12 +3,13 @@ import pyscreenshot as screen
 from  subprocess import PIPE,Popen
 import os, threading, time, datetime, sys
 
-# Database [folder address]
+
 if sys.platform == 'wind32':
     slash = "\\"
 else:
     slash = "/"
 
+# Database [folder address]
 Database = f".{slash}example-output"
 rect_Height = 300 # height of rectangle (should be even), set to zero for screen hight
 rect_Width = 300 # width of rectangle (should be even), set to zero for screen width
@@ -98,6 +99,7 @@ def main():
                 # print(e)
                 exc_type, exc_obj, exc_tb = sys.exc_info()
                 fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+                # print the error line
                 print(exc_type, fname, exc_tb.tb_lineno)
                 
 cThread = threading.Thread(target = main )
