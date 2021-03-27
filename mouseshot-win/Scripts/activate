@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Mamda\Desktop\startup\github-projects\mouseshot\mouseshot-win"
+VIRTUAL_ENV="C:\Users\Mamda\Desktop\startup\github-projects\mouseshot\mouseshot\mouseshot-win"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
