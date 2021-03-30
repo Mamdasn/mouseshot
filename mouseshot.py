@@ -11,7 +11,7 @@ else:
 
 # Database [folder address]
 Database = f".{slash}example-output"
-rect_Height = 300 # height of rectangle (should be even), set to zero for screen hight
+rect_Height = 300 # height of rectangle (should be even), set to zero for screen height
 rect_Width = 300 # width of rectangle (should be even), set to zero for screen width
 
 class Mouse:
