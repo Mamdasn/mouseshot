@@ -10,7 +10,6 @@ Hopefully, there are programs such as this one in the internet that give humans 
 `pip install -r requirements.txt`
 into a terminal, the program can easily start with 
 `python mouseshot.py`.  
-✔️ Also mouseshot and mouseshot-win venvs are provided for linux and windows os respectively, with the required libraries pre-installed. One can activate mouseshot by entering `source mouseshot/bin/activate` in a terminal on linux and `mouseshot-win\Scripts\activate.bat` in a cmd on windows. Then run the program normally by entering `python mouseshot.py`. For deactivating just enter `deactivate`.  
 ✔️Change database destination to a static directory in your system and also mess with the height and width of the rectangle to your satisfaction.  
 
 # Output 👊
